@@ -114,7 +114,7 @@ poplavok = cv2.imread(f"resources/{ekranYüksekliği}/poplavok.png", 0)
 print("Los Tarık Deli Balıklısı gms10ur gururla sunar.... 2C'ye selamlarla.")
 print(strftime("%H:%M:%S", gmtime()), "5 Saniye sonra bot çalışacaktır. Olta 'E' tuşunda olmalıdır.")
 
-if tamir:
+if tamirEt:
     print("Otomatik tamir etkin, her 50 toplayışta bir tamir edilecek. Premiumun etkin olduğundan emin olunuz.")
 else:
     print("Otomatik tamir devre dışı")
