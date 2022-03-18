@@ -1,0 +1,5 @@
+numpy
+pyautogui
+opencv-python
+pywin32
+pyinstaller
