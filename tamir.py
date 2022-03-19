@@ -9,7 +9,7 @@ import win32gui
 print(strftime("%H:%M:%S", gmtime()), "5 Sn içinde tamir işlemi başlayacaktır.")
 time.sleep(5)
 
-screenWidth, screenHeight= pyautogui.size()
+ekranGenişliği, ekranYüksekliği= pyautogui.size()
 pyautogui.position()
 
  # pet ekranını açıver
