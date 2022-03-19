@@ -1,0 +1,5 @@
+# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
+*.html linguist-vendored
+
+# Replace any whitespace in the language name with hyphens:
+*.toc linguist-vendored
