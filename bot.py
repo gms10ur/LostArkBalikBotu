@@ -99,8 +99,8 @@ def oltayıTamirEt(ekranGenişliği, ekranYüksekliği):
 
     # Mouse re-locate
     print(strftime("%H:%M:%S", gmtime()), "Mouse yeni bi lokasyona çekiliyor.")
-    xOffset = random.uniform(0.2, 0.8)
-    yOffset = 0.1
+    xOffset = 0.2
+    yOffset = random.uniform(0.2, 0.5)
     gitX3 = round(ekranGenişliği * xOffset)
     gitY3 = round(ekranYüksekliği * yOffset)
     pyautogui.click(x=gitX3, y=gitY3, clicks=0, button='left')
@@ -135,7 +135,7 @@ while(1):
 
     # şablon aramaca
     temp_kordinatları = cv2.matchTemplate(görsel, template, cv2.TM_CCOEFF_NORMED)
-    loc = numpy.where( temp_kordinatları >= 0.7)
+    loc = numpy.where(temp_kordinatları >= 0.7)
 
     # taramaya göre oltayı geri çek veya bekle
     if len(loc[0]) > 0 and durum == "atıldı":
@@ -159,7 +159,7 @@ while(1):
 
     # search pattern on screen for buoy
     poplavok_coordinates = cv2.matchTemplate(görsel, poplavok, cv2.TM_CCOEFF_NORMED)
-    poplavok_loc = numpy.where( poplavok_coordinates >= 0.7)
+    poplavok_loc = numpy.where(poplavok_coordinates >= 0.7)
     
     if len(poplavok_loc[0]) == 0 and durum == "çekildi":
         oltayıAt(sayaç)
